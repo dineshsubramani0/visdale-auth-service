@@ -24,7 +24,6 @@ async function bootstrap(): Promise<void> {
     origin: [frontendUrl],
     credentials: true,
   });
-  app.setGlobalPrefix('api');
   app.use(cookieParser());
 
   // Logger
