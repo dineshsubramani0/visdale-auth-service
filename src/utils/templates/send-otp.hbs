@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification</title>
+  <style>
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .header {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+    .greeting {
+      font-size: 18px;
+      color: #1f2937;
+      margin-bottom: 15px;
+    }
+    .message {
+      font-size: 16px;
+      color: #4b5563;
+      margin-bottom: 20px;
+    }
+    .otp-box {
+      display: inline-block;
+      font-size: 36px;
+      font-weight: 700;
+      color: #111827;
+      background-color: #e0e7ff;
+      padding: 15px 30px;
+      border-radius: 10px;
+      letter-spacing: 6px;
+      margin-bottom: 20px;
+    }
+    .footer {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-top: 25px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      .otp-box {
+        font-size: 28px;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">{{APPLICATION}} OTP Verification</div>
+    <div class="greeting">
+      Hello {{first_name}} {{last_name}},
+    </div>
+    <div class="message">
+      Enter the following One-Time Password (OTP) to verify your email address:
+    </div>
+    <div class="otp-box">{{otp}}</div>
+    <div class="message">
+      This OTP is valid for 10 minutes. Keep it confidential and do not share it with anyone.
+    </div>
+    <div class="footer">
+      If you did not request this OTP, please ignore this email.
+    </div>
+  </div>
+</body>
+</html>
