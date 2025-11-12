@@ -17,6 +17,7 @@ export interface EnvInterface {
   JWT_SECRET_KEY: string;
   JWT_EXPIRES_IN_MILLISECOND: number;
   JWT_REFRESH_EXPIRES_IN_MILLISECOND: number;
+  JWT_REFRESH_SECRET_KEY: string;
 
   MAIL_HOST: string;
   MAIL_PORT: number;

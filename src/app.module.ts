@@ -1,6 +1,5 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { AuthModule } from './auth/auth.module';
-import { JwtStrategy } from './strategies/jwt.strategy';
 import { EncryptionService } from './services/encryption.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ENV_CONFIG_KEYS } from './utils/constant/env.constant';
@@ -37,7 +36,6 @@ import { PassportModule } from '@nestjs/passport';
   ],
   controllers: [],
   providers: [
-    JwtStrategy,
     {
       provide: EncryptionService,
       useFactory: (configService: ConfigService) => {

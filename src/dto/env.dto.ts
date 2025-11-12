@@ -77,6 +77,10 @@ class EnvironmentVariablesDto implements EnvInterface {
 
   @IsString()
   @IsNotEmpty()
+  JWT_REFRESH_SECRET_KEY: string;
+
+  @IsString()
+  @IsNotEmpty()
   MAIL_HOST: string;
 
   @IsInt()

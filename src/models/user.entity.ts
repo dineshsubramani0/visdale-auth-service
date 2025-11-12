@@ -6,6 +6,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { Exclude } from 'class-transformer';
 
 @Entity('users')
 export class User {
@@ -21,6 +22,7 @@ export class User {
   @Column({ unique: true })
   email: string;
 
+  @Exclude()
   @Column()
   password: string;
 
@@ -36,6 +38,10 @@ export class User {
 
   @Column({ nullable: true })
   otp_expiry: Date;
+
+  @Exclude()
+  @Column({ nullable: true })
+  refresh_token: string;
 
   @CreateDateColumn()
   created_at: Date;
