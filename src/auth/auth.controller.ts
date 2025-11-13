@@ -88,7 +88,7 @@ export class AuthController {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       maxAge: Number(process.env.JWT_REFRESH_EXPIRES_IN_MILLISECOND),
-      sameSite: 'strict',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
     });
 
     return { access_token };
